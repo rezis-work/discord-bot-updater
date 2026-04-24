@@ -1,10 +1,9 @@
-# TEST: 12:27 AM Tbilisi = 20:27 UTC (Georgia is UTC+4, no DST).
-# After testing, use noon Tbilisi: cron "0 8 * * *" (12:00 PM Tbilisi).
+# 11:00 AM Georgia (Tbilisi) ≈ 07:00 UTC (UTC+4, no DST). Slightly early to offset Actions delay.
 name: Daily Discord webhook
 
 on:
   schedule:
-    - cron: "27 20 * * *"
+    - cron: "0 7 * * *"
   workflow_dispatch:
 
 jobs:
