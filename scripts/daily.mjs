@@ -1,6 +1,7 @@
 const url = process.env.DISCORD_WEBHOOK_URL;
-const content =
+const defaultMessage =
   "Good morning, folks! What did you work on yesterday, and what are you going to work on today?";
+const content = process.env.DISCORD_MESSAGE?.trim() || defaultMessage;
 
 if (!url) {
   console.error("Missing DISCORD_WEBHOOK_URL (set it in GitHub repo Secrets).");
